@@ -21,9 +21,9 @@ namespace House_Project2
         {
             List<Role> roles;
 
-            using (HouseContext carDealerContext = new HouseContext())
+            using (HouseContext houseContext = new HouseContext())
             {
-                roles = carDealerContext.Roles.OrderBy(role => role.Id).ToList();
+                roles = houseContext.Roles.OrderBy(role => role.Id).ToList();
             }
 
             roleComboBox.ValueMember = "Id";
